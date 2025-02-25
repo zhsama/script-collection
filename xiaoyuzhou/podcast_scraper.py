@@ -15,7 +15,8 @@ headers = {
     'sec-ch-ua-platform': '"macOS"'
 }
 
-url = "https://www.xiaoyuzhoufm.com/collection/podcast/67bc1526d3fc170cb3ec380e"
+# url = "https://www.xiaoyuzhoufm.com/collection/podcast/67bc1526d3fc170cb3ec380e"
+url = input('请输入播客集合的URL: ')
 
 try:
     for attempt in range(3):
@@ -39,8 +40,13 @@ try:
                 target_data = data["props"]["pageProps"]["collection"]["target"]
                 pids = [item["pid"] for item in target_data if "pid" in item]
                 print(f"所有 pid: {pids}")
+                break
             except json.JSONDecodeError:
                 continue
+
+    base_url = "https://www.xiaoyuzhoufm.com/podcast/"
+    urls = [f"{base_url}{pid}" for pid in pids]
+    print(f"所有播客链接: {urls}")
 
 except Exception as e:
     print(f"请求失败，错误信息: {e}") 
