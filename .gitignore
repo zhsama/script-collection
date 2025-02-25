@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+.idea/
+
+# Environment variables
+.env
+
+# Egg files
+*.egg-info/
+*.egg
+
+# Logs
+*.log
+
+# Database files
+*.sqlite3
+*.db
+
+# macOS specific
+.DS_Store 
