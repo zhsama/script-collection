@@ -15,7 +15,7 @@ This repository contains a collection of Python scripts designed for various fun
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/script-collection.git
+   git clone https://github.com/zhsama/script-collection.git
    cd script-collection
    ```
 
@@ -30,7 +30,7 @@ This repository contains a collection of Python scripts designed for various fun
 - **Podcast Scraper**: Run `podcast_scraper.py` to fetch and display all `pid` values from the specified podcast collection.
 - **Rule Parser**: Execute `rule_parser.py` and provide an input file containing rule blocks along with an output directory to save the parsed files.
 - **Generate .mdc Files**: Use [Cursor Directory](https://cursor.directory/generate) to generate new .mdc files for your project by uploading your `.cursorrules`, `package.json`, `requirements.txt`, or other project files.
-- **Cursor Config Manager**: Launch `cursor_config_manager.py` to manage configuration settings interactively.
+- **Cursor Config Manager**: Launch `cursor_config_manager.py` to reset the machine code of Cursor to achieve unlimited free trial extension.
 
 ## 🤝 Contributing
 

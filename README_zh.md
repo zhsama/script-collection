@@ -15,7 +15,7 @@
 1. 克隆仓库：
 
    ```bash
-   git clone https://github.com/yourusername/script-collection.git
+   git clone https://github.com/zhsama/script-collection.git
    cd script-collection
    ```
 
@@ -30,7 +30,7 @@
 - **播客爬虫**：运行 `podcast_scraper.py` 以获取并显示指定播客集合中的所有 `pid` 值。
 - **规则解析器**：执行 `rule_parser.py`，提供一个包含规则块的输入文件和一个输出目录以保存解析后的文件。
 - **生成 .mdc 文件**：使用 [Cursor Directory](https://cursor.directory/generate) 通过上传 `.cursorrules`、`package.json`、`requirements.txt` 或其他项目文件来生成新的 .mdc 文件。
-- **Cursor配置管理器**：启动 `cursor_config_manager.py` 以交互式管理配置设置。
+- **Cursor配置管理器**：启动 `cursor_config_manager.py` 重置cursor机器码，以实现无限免费试用续杯。
 
 ## 🤝 贡献
 
