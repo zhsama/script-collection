@@ -13,6 +13,8 @@ src/
 │   ├── cursor_rules_convert.py  # Converts rules to MDC format
 │   ├── rule_parser.py       # Parses rule blocks
 │   └── cursor_config_manager.py # Cursor settings manager
+├── docker/
+│   └── docker_restart.sh    # Docker container auto-restart script
 ├── telegram/
 │   └── webp2gif.py         # Telegram sticker converter
 └── xiaoyuzhou/
@@ -25,6 +27,7 @@ src/
 - **Rule Parser**: Parses structured rule blocks from a text file and saves each block as a separate Markdown file for better organization.
 - **Telegram Sticker Converter**: Converts Telegram stickers (WebP) to WeChat-compatible GIF format with optimized settings.
 - **Cursor Rules Converter**: Converts custom rule formats into MDC (Markdown Configuration) files for enhanced Cursor functionality.
+- **Docker Container Auto-restart**: Sets up scheduled restarts for Docker containers using cron jobs.
 
 ## 🚀 Installation
 
@@ -46,6 +49,7 @@ src/
 - **Podcast Scraper**: `requests`, `beautifulsoup4`
 - **Telegram Sticker Converter**: `opencv-python`, `Pillow`, `numpy`, `psutil`, `tqdm`
 - **Cursor Tools**: `pyyaml`, `markdown`
+- **Docker Tools**: Docker Engine installed on the system
 
 ## 🛠️ Usage
 
@@ -72,6 +76,31 @@ src/
   - `-c, --max-colors`: Maximum colors (2-256, default: 256)
   - `-f, --fps`: Frame rate (0=original, default: 0)
   - `-w, --max-width`: Maximum width in pixels (default: 800)
+
+- **Docker Container Auto-restart**: Use `docker_restart.sh` to set up scheduled container restarts:
+
+  ```bash
+  sudo bash docker_restart.sh <container_name> [cron_expression]
+  ```
+
+  Parameters:
+  - `container_name`: Name of the Docker container to restart
+  - `cron_expression`: Optional cron expression (default: "0 4 ** *" - 4 AM daily)
+
+  Example:
+
+  ```bash
+  # Restart container 'web-app' every day at 4 AM
+  sudo bash docker_restart.sh web-app
+
+  # Restart container 'db-server' every Sunday at 2 AM
+  sudo bash docker_restart.sh db-server "0 2 * * 0"
+  ```
+
+  The script will:
+  1. Create a restart script in `/usr/local/bin/`
+  2. Set up a cron job for scheduled execution
+  3. Log all restarts to `/var/log/docker_restart.log`
 
 ## 🤝 Contributing
 
